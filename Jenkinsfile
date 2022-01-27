@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Pull') {
+        stage('Pull over') {
             steps {
                 bat "npm install"
                 bat "npm start"
