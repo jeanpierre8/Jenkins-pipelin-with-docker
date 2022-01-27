@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 services: 
     web:
         build:
@@ -6,5 +6,7 @@ services:
             dockerfile: ./Dockerfile
         command: npm start
         volumes: 
+            - .:/my-app-name/
+            - /my-app-name/node_modules
         ports:
             - 3000:3000
