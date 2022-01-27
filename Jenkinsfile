@@ -1,13 +1,11 @@
-pipeline {
+pipeline{
     agent any
-
-    stages {
-        stage('Pull over') {
-            steps {
-                bat "npm install"
-                bat "npm start"
+    
+    stages{
+        stage('docker pipeline'){
+            steps{
+                bat "docker-compose up --build"
             }
         }
-        
     }
 }
