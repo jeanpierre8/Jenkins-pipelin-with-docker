@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                bat "echo hello world"
+                bat "npm install"
+                bat "npm start"
             }
         }
         
