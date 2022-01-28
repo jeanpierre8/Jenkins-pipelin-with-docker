@@ -1,13 +1,11 @@
 version: '3'
-services: 
+services:
     web:
-        build:
-            context: .
-            dockerfile: ./Dockerfile
-        command: npm start
-        volumes:
-            - './:/my-app-name'
-            - '/my-app-name/node_modules'
-        stdin_open: true
+        build: .
         ports:
-            - 3000:3000
+            - "3000:3000"
+        stdin_open: true
+        volumes:
+            - /my-app-name/public/
+            - ./my-app-name/public:/my-app-name/public
+            - ./my-app-name/src:/my-app-name/src
