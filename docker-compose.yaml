@@ -4,9 +4,7 @@ services:
         build:
             context: .
             dockerfile: ./Dockerfile
-        command: npm start
         volumes: 
             - .:/my-app-name/
-            - /my-app-name/node_modules
         ports:
             - 3000:3000
