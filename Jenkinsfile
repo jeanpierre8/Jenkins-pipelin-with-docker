@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('docker pipeline'){
             steps{
-                bat "docker image rm -f jenkins-pipelin-with-docker"
+                bat "docker images"
                 bat "docker-compose up --build"
             }
         }
