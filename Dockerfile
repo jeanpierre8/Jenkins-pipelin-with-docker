@@ -1,6 +1,8 @@
 FROM node:latest
 WORKDIR /my-app-name
 COPY my-app-name .
+COPY my-app-name/package.json ./
+COPY my-app-name/package-lock.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
