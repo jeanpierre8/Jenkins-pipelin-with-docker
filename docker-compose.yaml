@@ -5,6 +5,9 @@ services:
             context: .
             dockerfile: ./Dockerfile
         volumes: 
-            - .:/my-app-name/
+            - './:/my-app-name'
+            - '/my-app-name/node_modules'
+        stdin_open: true
+        command: npm start
         ports:
             - 3000:3000
